@@ -1,0 +1,86 @@
+<odoo>
+
+  <!-- inherit sale order -->
+  <record id='sale_order_inherit' model='ir.ui.view'>
+    <field name='name'>sale.order.inherit</field>
+    <field name='model'>sale.order</field>
+    <!-- get from ui, edit view sale order -->
+    <field name='inherit_id' ref='sale.view_order_form'/>
+    <field name="arch" type="xml">
+      <field name='partner_id' position='after'>
+        <field name='patient_name'/>
+      </field>
+    </field>
+  </record>
+  <!-- end inherit sale order -->
+
+  <!-- tree view of the patient model -->
+  <record id="patient_tree" model="ir.ui.view">
+    <field name="name">hospital.patient.form</field>
+    <field name="model">hospital.patient</field>
+    <field name="arch" type="xml">
+      <tree string="Patients">
+        <field name="name_seq"/>
+        <field name="patient_name"/>
+        <field name="patient_age"/>
+        <field name="notes"/>
+      </tree>
+    </field>
+  </record>
+  <!-- end tree view of the patient model -->
+  <!-- form view of the patient model -->
+  <record id="patient_form" model="ir.ui.view">
+    <field name="name">hospital.patient.form</field>
+    <field name="model">hospital.patient</field>
+    <field name="arch" type="xml">
+      <form string="Patients">
+        <sheet>
+          <div class="oe_title">
+            <h1>
+              <field name="name_seq" readonly="1"/>
+            </h1>
+          </div>
+          <group>
+            <group>
+              <field name="patient_name"/>
+            </group>
+            <group>
+              <field name="patient_age"/>
+            </group>
+          </group>
+          <group>
+            <field name="notes"/>
+            <field name="image"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+          <field name="message_follower_ids" widget="mail_followers"/>
+          <field name="activity_ids" widget="mail_activity"/>
+          <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+        </div>
+      </form>
+    </field>
+  </record>
+  <!-- end form view of the patient model -->
+  <!-- actions opening views on models -->
+
+  <record model="ir.actions.act_window" id="action_patient">
+    <field name="name">Patients</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">hospital.patient</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+          Create First Patient
+      </p>
+    </field>
+  </record>
+  <!-- end actions opening views on models -->
+
+  <!-- Top menu item -->
+  <menuitem name="EBK Hospital" id="hospital_menu_root" web_icon="ebk_hospital,static/description/icon.png"/>
+  <!-- end Top menu item -->
+  <!-- menu categories -->
+  <menuitem name="Patient" id="hospital_menu_patient" parent="hospital_menu_root" action="action_patient"/>
+  <!-- end menu categories -->
+</odoo>
