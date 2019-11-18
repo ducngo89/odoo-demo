@@ -26,7 +26,7 @@ class HospitalPatient(models.Model):
                     rec.age_group = 'major'
 
     patient_name = fields.Char(string='Name', required=True)
-    patient_age = fields.Integer(string='Age')
+    patient_age = fields.Integer(string='Age', track_visibility="always")
     notes = fields.Text(string='Notes')
     image = fields.Binary(string='Image')
 
