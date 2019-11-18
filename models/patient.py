@@ -19,16 +19,16 @@ class HospitalPatient(models.Model):
     @api.depends('patient_age')
     def set_age_group(self):
         for rec in self:
-            if rec.patient_age:
+            if rec.patient_age is not None:
                 if rec.patient_age < 18:
                     rec.age_group = 'minor'
                 else:
                     rec.age_group = 'major'
 
     patient_name = fields.Char(string='Name', required=True)
-    patient_age = fields.Integer(string='Age', track_visibility="always")
+    patient_age = fields.Integer('Age', track_visibility="always")
     notes = fields.Text(string='Notes')
-    image = fields.Binary(string='Image')
+    image = fields.Binary(string='Image', attachment=True)
 
     name = fields.Char(string='Test')
 
