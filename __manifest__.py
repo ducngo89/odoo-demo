@@ -23,6 +23,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
+        'views/appointment.xml',
         'data/ir_sequence_data.xml',
         #'views/templates.xml',
     ],
