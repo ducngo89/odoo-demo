@@ -16,11 +16,12 @@ class HospitalPatient(models.Model):
     _inherit = ['mail.thread.cc', 'mail.activity.mixin']
     # init Record name
     _rec_name = 'patient_name'
+    _order = "id desc"
 
     @api.constrains('patient_age')
     def check_age(self):
         for rec in self:
-            if rec.patient_age <=5:
+            if rec.patient_age <= 5:
                 raise ValidationError(_('The age must be Grater then 5'))
 
     @api.depends('patient_age')

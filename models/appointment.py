@@ -9,6 +9,7 @@ class HospitalAppointment(models.Model):
     _description = 'Appointment'
     # init chatter
     _inherit = ['mail.thread.cc', 'mail.activity.mixin']
+    _order = "id desc"
 
     @api.model
     def create(self, vals):
