@@ -25,6 +25,8 @@
         'data/ir_sequence_data.xml',
         'views/patient.xml',
         'views/appointment.xml',
+        'reports/report.xml',
+        'reports/patient_card.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
