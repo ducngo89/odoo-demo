@@ -17,19 +17,18 @@
     # for the full list
     'category': 'Uncategorized',
     # any module necessary for this one to work correctly
-    'depends': ['base','mail','sale'],
+    'depends': ['base', 'mail', 'sale'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/appointment.xml',
         'data/ir_sequence_data.xml',
-        #'views/templates.xml',
+        'views/patient.xml',
+        'views/appointment.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
-    'application':True
+    'application': True
 }
