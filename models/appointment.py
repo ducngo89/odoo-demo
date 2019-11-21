@@ -33,7 +33,7 @@ class HospitalAppointment(models.Model):
     patient_id = fields.Many2one(
         'hospital.patient', string="Patient", required=True)
     patient_age = fields.Integer("Age", related="patient_id.patient_age")
-    notes = fields.Char(string="Register Note", default=_get_default_note)
+    notes = fields.Text(string="Register Note", default=_get_default_note)
     appointment_date = fields.Date(string="Date", required=True)
 
     state = fields.Selection([
@@ -42,3 +42,6 @@ class HospitalAppointment(models.Model):
         ('done', 'Done'),
         ('cancel', 'Cancelled'),
     ], string="Status", readonly=True, default="draft")
+
+    doctor_note = fields.Text(string="Doctor Note")
+    pharmacy_note = fields.Text(string="Pharmacy Note")
