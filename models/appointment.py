@@ -45,3 +45,5 @@ class HospitalAppointment(models.Model):
 
     doctor_note = fields.Text(string="Doctor Note")
     pharmacy_note = fields.Text(string="Pharmacy Note")
+
+

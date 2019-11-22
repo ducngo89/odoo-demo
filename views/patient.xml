@@ -61,6 +61,13 @@
               <field name="appointment_count" string="Appointments" widget="statinfo"/>
             </button>
             <!-- end display smart button action-->
+
+            <!-- display smart button Archive-->
+            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+              <field name="active" string="Archive" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+            </button>
+            <!-- end display smart button Archive-->
+
           </div>
 
           <field name="image" widget="image" class="oe_avatar"/>
