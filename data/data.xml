@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- noupdate: no update when upgread app -->
+    <data noupdate="1">
+
+        <!-- Default data patient -->
+        <record id="patient_xyz" model="hospital.patient">
+            <field name="patient_name">XYZ</field>
+            <field name="patient_age">30</field>
+            <field name="name">0949706831</field>
+            <field name="gender">fe_male</field>
+            <field name="notes">happy Sad</field>
+        </record>
+
+    </data>
+
+    <data noupdate="1">
+
+        <!-- Default data patient -->
+        <record id="appointment_xyz" model="hospital.appointment">
+            <field name="patient_id" ref="patient_xyz"/>
+            <field name="appointment_date">2019-11-25 09:00:00</field>
+            <field name="notes">happy appointment</field>
+        </record>
+
+    </data>
+</odoo>
