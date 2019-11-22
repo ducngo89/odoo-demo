@@ -34,7 +34,7 @@
         <field name="patient_name"/>
         <field name="gender"/>
         <field name="age_group"/>
-        <field name="patient_age"/>
+        <field name="patient_age" avg="Avg of age"/>
         <field name="notes"/>
       </tree>
     </field>
