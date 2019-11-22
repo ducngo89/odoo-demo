@@ -3,6 +3,18 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
+# override function create partner
+
+
+class ResPartners(models.Model):
+    _inherit = 'res.partner'
+    @api.model
+    def create(self, vals_list):
+        res = super(ResPartners, self).create(vals_list)
+        print('yes working')
+        # do something with res.partner
+        return res
+
 
 class SaleOrderInherit(models.Model):
     _inherit = 'sale.order'
