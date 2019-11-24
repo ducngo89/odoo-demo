@@ -23,6 +23,7 @@
     'data': [
         'security/ir.model.access.csv',
         'data/ir_sequence_data.xml',
+        'data/security.xml',
         'data/data.xml',
         'views/patient.xml',
         'views/doctor.xml',
