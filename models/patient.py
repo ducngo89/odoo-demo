@@ -73,6 +73,9 @@ class HospitalPatient(models.Model):
 
     active = fields.Boolean("Active", default=True)
 
+    doctor_id = fields.Many2one(
+        'hospital.doctor', string="Doctor")
+
     # auto name
     name_seq = fields.Char(string='Patient ID', required=True,
                            copy=False, readonly=True, index=True, default=lambda self: _('New'))

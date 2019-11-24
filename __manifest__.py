@@ -25,6 +25,7 @@
         'data/ir_sequence_data.xml',
         'data/data.xml',
         'views/patient.xml',
+        'views/doctor.xml',
         'views/appointment.xml',
         'reports/report.xml',
         'reports/patient_card.xml',
