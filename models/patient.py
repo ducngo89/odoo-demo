@@ -117,3 +117,9 @@ class HospitalPatient(models.Model):
         # end auto name
         result = super(HospitalPatient, self).create(vals)
         return result
+
+    def action_send_card(self):
+        print('sending email')
+        template_id = self.env.ref('odoo-demo.patient_card_email_template').id
+        self.env['mail.template'].browse(
+            template_id).send_mail(self.id, force_send=True)
