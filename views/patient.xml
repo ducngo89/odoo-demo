@@ -1,5 +1,17 @@
 <odoo>
 
+  <!-- add button actions -->
+  <record model='ir.actions.act_window' id='action_patient_appointments'>
+    <field name='name'>Appointments</field>
+    <field name='type'>ir.actions.act_window</field>
+    <field name='res_model'>hospital.appointment</field>
+    <field name='domain'>[('patient_id','=',active_id)]</field>
+    <field name='view_mode'>tree,form</field>
+    <field name='view_id' ref="odoo-demo.appointment_tree"/>
+    <field name='binding_model_id' ref="model_hospital_patient"/>
+  </record>
+  <!-- end add button actions -->
+
   <!-- display smart button type action-->
   <record model='ir.actions.act_window' id='open_patient_appointments'>
     <field name='name'>Appointments</field>
