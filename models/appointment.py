@@ -46,4 +46,15 @@ class HospitalAppointment(models.Model):
     doctor_note = fields.Text(string="Doctor Note")
     pharmacy_note = fields.Text(string="Pharmacy Note")
 
+    appointment_lines = fields.One2many(
+        "hospital.appointment.lines", "appointment_id", string="Medicines")
 
+
+class HospitalAppointmentLines(models.Model):
+    _name = 'hospital.appointment.lines'
+    _description = 'Appointment Lines'
+
+    product_id = fields.Many2one("product.product", string="Medicine")
+    product_qty = fields.Integer(string="Quantity")
+    appointment_id = fields.Many2one(
+        "hospital.appointment", string="Appointment ID")
