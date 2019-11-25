@@ -149,5 +149,6 @@
   <!-- end Top menu item -->
   <!-- menu categories -->
   <menuitem name="Patient" id="hospital_menu_patient" parent="hospital_menu_root" action="action_patient"/>
+  <menuitem name="Create Appointment" id="hospital_menu_create_appointment" parent="hospital_menu_root" action="create_appointment_wizard"/>
   <!-- end menu categories -->
 </odoo>
