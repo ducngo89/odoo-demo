@@ -24,7 +24,7 @@
         <field name="groups" eval="[(4,ref('group_hospital_doctor'))]"/>
     </record>
 
-        <record id="patient_manager_record_rule" model="ir.rule">
+    <record id="patient_manager_record_rule" model="ir.rule">
         <field name="name">See All Patient</field>
         <field name="model_id" ref="model_hospital_patient"/>
         <field name="domain_force">[]</field>

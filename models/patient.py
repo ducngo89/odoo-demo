@@ -73,7 +73,7 @@ class HospitalPatient(models.Model):
     notes = fields.Text(string='Notes')
     image = fields.Binary(string='Image', attachment=True)
 
-    name = fields.Char(string='Test')
+    email_id = fields.Char(string='Email')
 
     appointment_count = fields.Integer(
         string="Appointment", compute="get_appointment_count")
@@ -82,6 +82,9 @@ class HospitalPatient(models.Model):
 
     doctor_id = fields.Many2one(
         'hospital.doctor', string="Doctor")
+
+    user_id = fields.Many2one(
+        'res.users', string="PRO")
 
     # auto name
     name_seq = fields.Char(string='Patient ID', required=True,
