@@ -84,8 +84,19 @@ class HospitalPatient(models.Model):
         ('fe_male', 'Female')
     ], default='male', string='Gender')
 
+    doctor_gender = fields.Selection([
+        ('male', 'Male'),
+        ('fe_male', 'Female')
+    ], default='male', string='Doctor Gender')
+
     age_group = fields.Selection(
         [('major', 'Major'), ('minor', 'Minor')], string='Age Group', compute='set_age_group')
+
+    @api.onchange('doctor_id')
+    def set_doctor_gender(self):
+        for rec in self:
+            if(rec.doctor_id):
+                rec.doctor_gender = rec.doctor_id.gender
 
     @api.model
     def create(self, vals):
