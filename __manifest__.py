@@ -25,13 +25,14 @@
         'security/security.xml',
         'data/ir_sequence_data.xml',
         'data/data.xml',
-        'data/email_template.xml',
+        'wizards/create_appointment.xml',
+        'views/appointment.xml',
         'views/patient.xml',
         'views/doctor.xml',
-        'views/appointment.xml',
         'reports/report.xml',
         'reports/patient_card.xml',
-        'wizards/create_appointment.xml',
+        'data/email_template.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

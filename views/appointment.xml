@@ -127,7 +127,5 @@
   </record>
   <!-- end actions opening views on models -->
 
-  <!-- menu categories -->
-  <menuitem name="Appointment" id="hospital_menu_appointment" parent="hospital_menu_root" action="action_appointment"/>
-  <!-- end menu categories -->
+
 </odoo>

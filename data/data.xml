@@ -7,8 +7,16 @@
         <record id="patient_xyz" model="hospital.patient">
             <field name="patient_name">XYZ</field>
             <field name="patient_age">30</field>
-            <field name="name">0949706831</field>
+            <field name="email_id">ducngo89@gmail.com</field>
             <field name="gender">fe_male</field>
+            <field name="notes">happy Sad</field>
+        </record>
+
+          <record id="patient_xyz1" model="hospital.patient">
+            <field name="patient_name">XYZ1 1</field>
+            <field name="patient_age">30</field>
+            <field name="email_id">ducngo89@gmail.com</field>
+            <field name="gender">male</field>
             <field name="notes">happy Sad</field>
         </record>
 
