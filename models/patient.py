@@ -120,6 +120,6 @@ class HospitalPatient(models.Model):
 
     def action_send_card(self):
         print('sending email')
-        template_id = self.env.ref('odoo-demo.patient_card_email_template').id
+        template_id = self.env.ref('odoo_demo.patient_card_email_template').id
         self.env['mail.template'].browse(
             template_id).send_mail(self.id, force_send=True)

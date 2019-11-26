@@ -14,7 +14,7 @@
                 <t t-foreach="docs" t-as="doc">
 
                     <!-- call other template -->
-                    <t t-call="odoo-demo.report_patient_cards"/>
+                    <t t-call="odoo_demo.report_patient_cards"/>
                     <!-- end call other template -->
 
                     <h2>Patient Test</h2>
