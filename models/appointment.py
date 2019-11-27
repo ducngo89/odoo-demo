@@ -19,6 +19,12 @@ class HospitalAppointment(models.Model):
             result = super(HospitalAppointment, self).create(vals)
             return result
 
+    def write(self, vals):
+
+        result = super(HospitalAppointment, self).write(vals)
+        print('Test write function')
+        return result
+
     def _get_default_note(self):
         return 'test default'
 
