@@ -97,6 +97,9 @@
               <field name="name_seq" readonly="1"/>
             </group>
             <group>
+              <field name="patient_name_upper"/>
+            </group>
+            <group>
               <field name="patient_age"/>
             </group>
             <group>
