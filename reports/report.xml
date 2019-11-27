@@ -7,4 +7,12 @@
         report_type="qweb-pdf" 
         name="odoo_demo.report_patient" 
         file="odoo_demo.report_patient" />
+
+    <report 
+        id="report_patient_card_xls" 
+        string="Patient Card Excel" 
+        model="hospital.patient" 
+        report_type="xlsx" 
+        name="odoo_demo.report_patient_xls" 
+        file="odoo_demo.report_patient_xls" />
 </odoo>
