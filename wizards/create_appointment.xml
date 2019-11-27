@@ -11,6 +11,7 @@
                     <field name="appointment_date"/>
                     <footer>
                         <button name="create_appointment" string="Create" class="btn-primary" type="object"/>
+                        <button name="get_data" string="Get Data" class="btn-primary" type="object"/>
                         <button string="Cancel" class="btn-secondary" special="cancel"/>
                     </footer>
                 </group>
